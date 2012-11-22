@@ -16,7 +16,7 @@ function searchModel() {
 		 
 		var db = Ti.Database.install("/db/map.sqlite", "location");
 		
-		var rows = db.execute("select * from mapview where (lat >= ? and lat <= ?) and (long >= ? and long <= ?)", bounds.latMin, bounds.latMax, bounds.lonMin, bounds.lonMax);
+		var rows = db.execute("select * from mapview where (lat >= ? and lat <= ?) and (long >= ? and long <= ?)", bounds.minLat, bounds.maxLat, bounds.minLon, bounds.maxLon);
 		
 		var totalRows = rows.getRowCount();
 		

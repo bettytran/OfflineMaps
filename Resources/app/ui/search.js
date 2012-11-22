@@ -44,8 +44,9 @@ function search() {
 			
 			//A small time out to allow the webview to load
 			setTimeout(function() {
-				Ti.App.fireEvent('map:showMarker', self.Model.data[e.index]);
+				mapView.setMarker(self.Model.data[e.index]);
 			}, 500);
+			
 		});
 
 		self.UI = win;

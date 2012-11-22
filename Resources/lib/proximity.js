@@ -30,10 +30,10 @@ var proximity = {
 		var lonR = latR / Math.cos(lat);
 		
 		return {
-			latMin: loc.lat - latR,
-			latMax: loc.lat + latR,
-			lonMin: loc.lon - lonR,
-			lonMax: loc.lon + lonR
+			minLat: loc.lat - latR,
+			maxLat: loc.lat + latR,
+			minLon: loc.lon - lonR,
+			maxLon: loc.lon + lonR
 		}
 
 		/*
